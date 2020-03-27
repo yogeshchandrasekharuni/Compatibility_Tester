@@ -40,4 +40,18 @@ y_kmeans = kmeans.fit(X_train)
 
 result = kmeans.predict(X_test)
 
+likeminded_people = [[], [], [], [], []]
+
+for i in range(len(result)):
+    if result[i] == 0:
+        likeminded_people[0].append(i)
+    elif result[i] == 1:
+        likeminded_people[1].append(i)
+    elif result[i] == 2:
+        likeminded_people[2].append(i)   
+    elif result[i] == 3:
+        likeminded_people[3].append(i)
+    else:
+        likeminded_people[4].append(i)        
+
 #2 people having same cluster number in result may be assumed be to like-minded
